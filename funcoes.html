@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //EXPRESSA 
+        const negativoPositivo = function(num){
+           if (num>0){
+            return "positivo"
+           }else if (num<0){
+            return "negativo"
+           }else{
+            return "zero"
+
+           }
+        }
+        alert(negativoPositivo(3))
+        alert(negativoPositivo(-3))
+
+
+        //SETA
+        const ParImpar = (num) => {
+            if(num%2==0){
+                return "par"
+
+            }else{
+                return "impar"
+            }
+        }
+        alert(ParImpar(9))
+
+        // TERNARIO  -> condiçao ? (true) : (false)
+        const ParImparTernario = (num) =>  {
+            return num%2==0 ?  "par" : "impar";
+        }
+        alert(ParImparTernario(2))
+        
+
+
+    </script>
+</body>
+</html>
