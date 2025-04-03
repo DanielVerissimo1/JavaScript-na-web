@@ -1,47 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividasde javaScript</title>
 </head>
 <body>
     <script>
-        const calculadora = (n1,n2,escolha) =>{
-            switch (escolha) {
-                case "-":
-                    return n1-n2
+        // const calculadora = (n1,n2,escolha) =>{
+        //     switch (escolha) {
+        //         case "-":
+        //             return n1-n2
                     
-                    break;
-                case "+":
-                    return n1+n2
+        //             break;
+        //         case "+":
+        //             return n1+n2
                     
-                    break;
-                case "*":
-                    return n1*n2
+        //             break;
+        //         case "*":
+        //             return n1*n2
                     
-                    break;
-                case "/":
-                    return n1/n2
-                    break;
+        //             break;
+        //         case "/":
+        //             return n1/n2
+        //             break;
                 
-                default:
-                    return `
-                    ================================
-                    
-                    Parametro nao identificado !! 
-                    
-                    Por favor digite apenas:
-                    - 
-                    + 
-                    / 
-                    *
-                    ===============================
-                    `
-                    break;
-            }
+        //         default:
+        //             return `
+        //            |================================|
+        //            |                                |
+        //            | Parametro nao identificado !!  |
+        //            |                                |
+        //            | Por favor, digite apenas:      |
+        //            | -                              |
+        //            | +                              |
+        //            | /                              |
+        //            | *                              |
+        //            |================================|
+        //             `
+        //             break;
+        //     }
+        // }
+        // alert(calculadora(-2,3,"0")) 
+
+
+
+        // Conversor de fahrenheit para celsius
+
+        const temperatura = function(f){
+            let conversao = 5/9 * (f - 32) 
+            return conversao.toFixed(1)
+
         }
-        alert(calculadora(2,3,"-"))
-    </script>
+        alert(temperatura(60),"Em graus celsius")
+</script>
 </body>
 </html>
