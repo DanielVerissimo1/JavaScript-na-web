@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <!-- Crie um programa que solicite ao usuário um valor de salário, se o
+    salário informado for menor ou igual a R$1630,00, aplique um
+    aumento de 15%. Se o salário for maior que R$1630,00 e menor ou
+    igual a R$3000,00, aplique um aumento de 10%. Se o salário for
+    maior que R$3000,00 e menor ou igual a R$5000,00, adicione um
+    aumento de 5%. Se o salário for maior que R$5000,00, adicione um
+    acréscimo de R$100,00. Exiba para o usuário o salário atualizado. -->
+    <script>
+
+        function VerificacaoSalario(salario) {
+            
+            if (salario <= 1630) {
+                return salario*0.15
+            } else if(salario > 1630 && salario <= 3000 ){
+                return salario*0.10
+            }else if(salario > 3000 && salario <=  5000 ){
+                return salario*0.5
+            }else if(salario > 5000 ){
+                return salario + 100
+            }
+
+        }
+ 
+        let salario = parseFloat(prompt("Digite seu salário: ")) 
+        alert(`
+        Seu salario atual é 
+        
+        ${VerificacaoSalario(salario)}
+        `)
+    </script>
+</body>
+</html>

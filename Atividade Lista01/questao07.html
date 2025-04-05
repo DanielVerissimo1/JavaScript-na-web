@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <!-- Crie um programa que solicite ao usuário duas notas e
+armazene-as em uma lista chamada notas1. Em seguida, peça mais
+duas notas e armazene-as em outra lista chamada notas2. Após
+isso, exibe as listas notas1 e notas2, além de uma terceira lista,
+notas3, que contém a concatenação de notas1 e notas2. -->
+    <script>
+        const notas1  = []
+        const notas2  = []
+        const concatenacao = notas1.concat(notas2)
+
+        for (let index = 0; index < 2; index++) {
+            let nota1 = Number(prompt("informe a sua nota: "))
+            notas1.push(nota1)  
+        }
+        for (let index = 0; index < 2; index++) {
+            let nota1 = Number(prompt("informe a sua nota: "))
+            notas2.push(nota1)    
+        }
+        alert("A primeira lista de notas tem: ", notas1.join(','))
+        alert("A segunda lista de notas tem: ", notas2.join(','))
+        alert("As duas listas juntas sao: ", concatenacao.join(','))
+
+        
+    </script>
+</body>
+</html>

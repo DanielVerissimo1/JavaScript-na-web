@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <!-- Escreva um programa que comece com este array de frutas
+frutas=[‘tomate’, ’abacate’, ‘morango’, ‘melancia’] e apresente um
+menu ao usuário e receba um número do usuário para realizar as
+seguintes operações:
+1 – Adicionar uma fruta no fim da lista (usuário informa a fruta
+a ser adicionada)
+2 – Remover a última fruta da lista
+3 – Exibir a(s) n primeiras frutas (usuário informa um número n)
+4 – Exibir a(s) n últimas frutas (usuário informa um número n)
+5 – Adicionar uma fruta na posição n (usuário informa um
+número n e a fruta a ser adicionada)
+Essas opções devem ser utilizadas para realizar as respectivas
+operações com com os dados fornecidos pelo usuário. Caso
+seja um número diferente, o programa deve informar “Opção
+inválida!”. -->
+    <script>
+        let frutas = ["maça","banana","uva","melão"]
+        const menu = function (operacao) {
+        switch (operacao) {
+            case 1:
+                alert(`
+                 As frutas na lista sao:
+
+                 ${frutas.join(" ")}`)
+                let adicionar  = prompt("digite a fruta que voce que adicionar na lista de frutas: ")
+                frutas.push(adicionar)
+
+                alert(`
+                  As frutas na lista após a alteraçao feita sao:
+
+                 ${frutas.join(" ")}`)
+                break;
+            case 2:
+
+            alert(`A ultima fruta foi removida com sucesso !`)
+
+                break;
+            case 3 :
+                alert(`
+                    As frutas na lista sao:
+
+                    ${frutas.join(" ")}`)
+                let mostrarPrimeiros  = parseInt(prompt("digite Aqui para Exibir a(s) n primeiras frutas da lista"))
+
+                alert(`
+                As frutas sao:
+                
+                ${frutas.slice(0,mostrarPrimeiros)}`)
+                    
+                break;
+
+            case 4 :
+                alert(`
+                    As frutas na lista sao:
+
+                    ${frutas.join(" ")}
+                        `)
+                let mostrarUltimos  = parseInt(prompt("digite Aqui para Exibir a(s) n ultimos da frutas da lista:"))
+                mostrarUltimos+=1
+
+
+                alert(`
+                 As frutas sao:
+
+                 ${frutas.slice(mostrarUltimos,frutas.length+1)}
+                    `)
+                break;
+            case 5 :
+
+            alert(`
+                    As frutas na lista sao:
+
+                    ${frutas.join(" ")}`)
+            let definirPosicao  = parseInt(prompt("digite a posição onde voce quer adicionar a fruta :"))
+            let adicionarNaPodicao = prompt("escreva a fruta que voce quer adicionar: ")
+
+            definirPosicao -=1
+            
+            frutas.splice(definirPosicao,0, adicionarNaPodicao)
+           
+            alert(`
+                 As frutas na lista apos a alteraçao feita sao:
+
+                 ${frutas.join(" ")}
+                
+                    `)
+                break
+                
+            default:
+                alert("opção invalida!")
+                break;
+        }
+
+        }
+
+
+        let operacao = parseInt(prompt(`
+                Veja as seguintes operações:
+                1 – Adicionar uma fruta no fim da lista 
+                2 – Remover a última fruta da lista
+                3 – Exibir a(s) n primeiras frutas
+                4 – Exibir a(s) n últimas frutas 
+                5 – Adicionar uma fruta na posição n  
+        `))
+        menu(operacao)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <script>
+
+        const decrescente = function (n1,n2,n3){
+            if (n3 >= n1 && n3 >= n2) {
+                if (n2 >= n1) {
+                    console.log("a sequencia sera: ",n3, n2, n1)
+                } else {
+                    console.log("a sequencia sera: ",n3, n1, n2)
+                    
+                }
+            }
+             else if (n2 >= n1 && n2 >= n3) {
+                if (n3 >= n1) {
+                    console.log("a sequencia sera: ",n2, n3, n1)
+                } else {
+                    console.log("a sequencia sera: ",n2, n1, n3)
+                    
+                }
+
+            }
+            else if (n1 >= n3 && n1 >= n2) {
+                if (n3 >= n2) {
+                    console.log("a sequencia sera: ",n1, n3, n2) 
+                } else {
+                    console.log("a sequencia sera: ",n1, n2, n3)
+                    
+                }
+
+            }
+       }
+
+       let n1 = Number(prompt("digite o primeiro da sequencia: "))
+       let n2 = Number(prompt("digite os segundo da sequencia: "))
+       let n3= Number(prompt("digite os terceiro da sequencia: "))
+
+       decrescente(n1,n2,n3)
+    </script>
+</body>
+</html>

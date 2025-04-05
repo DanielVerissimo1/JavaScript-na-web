@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <!-- Faça um programa que receba do usuário 4 notas referente a
+quatro bimestres de um aluno e calcule a média. Se a média for
+maior ou igual a 7, exiba “Aluno Aprovado”, se a média for menor
+
+que 7 e maior ou igual a 5, exiba “Aluno de Recuperação”, se a média
+for menor que 5, exiba “Aluno de Reprovado”. -->
+    <script>
+        const situacaoAluno = (nota1,nota2,nota3,nota4) => {
+            let  media = (nota1 + nota2+ nota3 + nota4)/4
+            
+            if (media >= 7 ) {
+                return "Aluno aprovado"
+            }
+            else if (media <= 5) {
+                return "Aluno de recuperação"
+            }
+            else if (media < 5 ) {
+                return "Aluno de reprovado"   
+            }
+     
+        }
+       let nota1 = Number(prompt("informe a primeira nota: "))
+       let nota2 = Number(prompt("informe a segunda nota: "))
+       let nota3 = Number(prompt("informe a terceira nota: "))
+       let nota4 = Number(prompt("informe a quarta nota: "))
+       
+       alert(situacaoAluno(nota1,nota2,nota3,nota4))
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <script>
+         const calculadora = (n1,n2,escolha) =>{
+             switch (escolha) {
+                 case "2":
+                     return n1-n2
+                    
+                     break;
+                 case "1":
+                     return n1+n2
+                    
+                     break;
+                 case "4":
+                     return n1*n2
+                    
+                     break;
+                 case "3":
+                     return n1/n2
+                     break;
+                
+                 default:
+                     return `
+                    
+                        Opção inválida!
+                        
+                        Digite:
+
+                        1 – Somar
+                        2 – Subtrair
+                        3 – Dividir
+                        4 – Multiplicar
+                     
+                     
+                     `
+                     
+                     
+                     break;
+             }
+         }
+        let escolha= prompt(`
+                        
+                        Escolha a sua operaçao
+
+                        1 – Somar
+                        2 – Subtrair
+                        3 – Dividir
+                        4 – Multiplicar
+                        
+                        Digitar numero: `)
+
+        let n1 = prompt("Digite o primeiro numero: ")
+        let n2 = prompt("Digite o segundo numero: ")
+
+         
+        alert(calculadora(n1,n2,escolha))
+    </script>
+</body>
+</html>

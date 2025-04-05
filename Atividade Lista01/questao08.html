@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <!-- Crie um programa que solicite ao usuário quatro nomes de alunos
+    e quatro notas, e crie uma lista de duas dimensões (array de arrays)
+    com os valores de nomes e notas informados pelo usuário, criando
+    
+    assim um array de alunos e suas notas: const lista = [alunos, notas].
+        Após isso, solicite ao usuário um nome e verifique se o nome
+        informado existe na lista, se existir, exiba o nome do aluno e a sua
+        respectiva nota, se não existir, mostre “Aluno Inexistente”. -->
+    <script>
+
+        const alunos = [];
+        const notas = [];
+
+        for (let index = 0; index < 4; index++) {
+            const nome = prompt('Digite o nome do aluno:');
+            const nota = parseFloat(prompt('Digite a nota do aluno:'));
+            alunos.push(nome);
+            notas.push(nota);           
+        }
+        const lista = [alunos, notas]
+        const nomeUsuario = prompt('Digite o nome de algum aluno para verificação:');
+
+        if (nomeUsuario ) {
+            
+        } else {
+            
+        }
+
+
+
+        
+    </script>
+</body>
+</html>

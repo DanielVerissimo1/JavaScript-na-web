@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java script</title>
+</head>
+<body>
+    <!--Crie um programa que peça ao usuário o valor de um produto e
+um percentual de desconto, depois exiba o valor final com o
+desconto aplicado.-->
+    <script>
+
+
+        const valorFinal = function(valor,desconto){
+            let  converte = desconto/100
+
+            let descontoReal = converte*valor
+
+            let descontoAplicado = valor-descontoReal
+
+            console.log(descontoAplicado)
+        }
+        const valor = parseFloat(prompt("Digite o valor do produto:"))
+        const desconto = parseFloat(prompt("Digite o valor do desconto em porcentagem:"))
+        valorFinal(valor,desconto)
+ 
+    </script>
+</body>
+</html>
