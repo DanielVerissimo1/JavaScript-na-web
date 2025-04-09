@@ -26,44 +26,66 @@ inválida!”. -->
         const menu = function (operacao) {
         switch (operacao) {
             case 1:
-                alert(`
-                 As frutas na lista sao:
-
-                 ${frutas.join(" ")}`)
-                let adicionar  = prompt("digite a fruta que voce que adicionar na lista de frutas: ")
+                let adicionar  = prompt(`
+                As frutas na lista sao:
+                ${frutas.join(" ")}
+                digite a fruta que voce quer adicionar na lista de frutas: `)
+                
                 frutas.push(adicionar)
 
                 alert(`
-                  As frutas na lista após a alteraçao feita sao:
+                
+                As frutas na lista após a alteraçao feita sao:
 
                  ${frutas.join(" ")}`)
                 break;
             case 2:
 
-            alert(`A ultima fruta foi removida com sucesso !`)
+            let remover = prompt(`
+            As frutas na lista sao:
+            ${frutas.join(" ")}
+            digite a fruta que voce quer remover na lista de frutas: `)
+
+            if (frutas.includes(remover)) {
+                    let index = frutas.indexOf(remover)
+
+                    alert(`
+                    As frutas na lista após a alteraçao feita sao:
+                    ${frutas.splice(index,1)}
+                    
+                    `)
+                } else {
+                    alert("Estudante nao encontrado !")
+                }
+
+            frutas.pop(remover)
+
+            alert(`
+            A ultima fruta foi removida com sucesso !
+            As frutas na lista sao:
+            ${frutas.join(" ")}
+            `)
 
                 break;
             case 3 :
-                alert(`
-                    As frutas na lista sao:
-
-                    ${frutas.join(" ")}`)
-                let mostrarPrimeiros  = parseInt(prompt("digite Aqui para Exibir a(s) n primeiras frutas da lista"))
+                let mostrarPrimeiros  = parseInt(prompt(`
+                As frutas na lista sao:
+                ${frutas.join(" ")}
+                digite Aqui para Exibir a(s) n primeiras frutas da lista:                
+                `))
 
                 alert(`
                 As frutas sao:
                 
                 ${frutas.slice(0,mostrarPrimeiros)}`)
-                    
                 break;
-
             case 4 :
-                alert(`
+             let mostrarUltimos  = parseInt(prompt(`
                     As frutas na lista sao:
 
                     ${frutas.join(" ")}
-                        `)
-                let mostrarUltimos  = parseInt(prompt("digite Aqui para Exibir a(s) n ultimos da frutas da lista:"))
+                    digite Aqui para Exibir a(s) n ultimos da frutas da lista:   `))
+                
                 mostrarUltimos+=1
 
 
@@ -74,12 +96,11 @@ inválida!”. -->
                     `)
                 break;
             case 5 :
-
-            alert(`
-                    As frutas na lista sao:
-
-                    ${frutas.join(" ")}`)
-            let definirPosicao  = parseInt(prompt("digite a posição onde voce quer adicionar a fruta :"))
+            
+            let definirPosicao  = parseInt(prompt(`
+                As frutas na lista sao:
+                ${frutas.join(" ")}
+                digite a posição onde voce quer adicionar a fruta :`))
             let adicionarNaPodicao = prompt("escreva a fruta que voce quer adicionar: ")
 
             definirPosicao -=1
@@ -105,7 +126,7 @@ inválida!”. -->
         let operacao = parseInt(prompt(`
                 Veja as seguintes operações:
                 1 – Adicionar uma fruta no fim da lista 
-                2 – Remover a última fruta da lista
+                2 – Remover uma fruta da lista
                 3 – Exibir a(s) n primeiras frutas
                 4 – Exibir a(s) n últimas frutas 
                 5 – Adicionar uma fruta na posição n  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const listaEstudantes = [ 
+            "joao","juliana","ana", "caio",
+            "Lara","marjoni","guilherme","aline","fabiana",
+            "andre","carlos","paulo","bia",
+            "viviane","isabele","vinicios","renan",
+            "renata","daisy","camilo"
+        ]
+
+        const divisao = listaEstudantes.length/2
+
+        const sala1 = listaEstudantes.slice(0,divisao)
+        const sala2 = listaEstudantes.slice(divisao)
+        
+        alert(listaEstudantes.join(" "))
+        alert(sala1)
+        alert(sala2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // const pet = ["vaca","bezerro","cao","gato"]
+
+        // alert(pet.includes("vaca")) // verifica se tem na lista -> retorna true ou false
+        // alert(pet.indexOf("vaca"))// passa diz onde esta na lista(passa o indice) 
+
+        const alunos=["joao","daniel","ana","bia"]
+        const medias=[1,6,8,9]
+        const alunosMedia = [alunos,medias]
+
+        /*criar uma funçao chamada 'ExibeNomeENota'
+          que recebe como parametro o nome do estudante e verificara se ele esta na lista
+          alunosMedia  se tiver retorna noem e media else 'estudante nao existe'*/
+
+          const nome = "ana"
+          const  ExibenomeENota = function (nome) {
+            
+            if (alunosMedia[0].includes(nome)) {// funçao expressa
+                let index = alunosMedia[0].indexOf(nome)
+
+                return `O(a) Aluno(a): ${alunosMedia[0][index]}, tem uma media de: ${alunosMedia[1][index]}`
+            } else {
+                return "Estudante nao encontrado !"
+            }
+          }
+          alert(ExibenomeENota(nome))
+
+
+    </script>
+</body>
+</html>

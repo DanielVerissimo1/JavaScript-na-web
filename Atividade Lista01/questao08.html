@@ -18,8 +18,8 @@
 
 
 
-        const alunos = [];
-        const notas = [];
+        const alunos = ["joao","maria"];
+        const notas = [2,9];
 
         for (let index = 0; index < 4; index++) {
             const nome = prompt('Digite o nome do aluno:');
@@ -28,13 +28,20 @@
             notas.push(nota);           
         }
         const lista = [alunos, notas]
+
         const nomeUsuario = prompt('Digite o nome de algum aluno para verificação:');
 
-        if (nomeUsuario ) {
+        const verificacao = (nomeUsuario)=>{
+            if (lista[0].includes(nomeUsuario)) {// funçao Seta
+                    let index = lista[0].indexOf(nomeUsuario)
+
+                    return `O(a) Aluno(a): ${lista[0][index]}, tem uma nota de: ${lista[1][index]}`
+                } else {
+                    return "Estudante nao encontrado !"
+                }
+            }
             
-        } else {
-            
-        }
+        alert(verificacao)
 
 
 
