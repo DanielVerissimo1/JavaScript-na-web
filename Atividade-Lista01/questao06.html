@@ -48,17 +48,11 @@ inválida!”. -->
 
             if (frutas.includes(remover)) {
                     let index = frutas.indexOf(remover)
+                    frutas.splice(index,1)
 
-                    alert(`
-                    As frutas na lista após a alteraçao feita sao:
-                    ${frutas.splice(index,1)}
-                    
-                    `)
                 } else {
                     alert("Estudante nao encontrado !")
                 }
-
-            frutas.pop(remover)
 
             alert(`
             A ultima fruta foi removida com sucesso !
@@ -86,7 +80,7 @@ inválida!”. -->
                     ${frutas.join(" ")}
                     digite Aqui para Exibir a(s) n ultimos da frutas da lista:   `))
                 
-                mostrarUltimos+=1
+                
 
 
                 alert(`
