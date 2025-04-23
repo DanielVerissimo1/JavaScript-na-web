@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="mensagem">texto aqui</p>
+    <div class="container">
+        <p>conteudo</p>
+    </div>
+    <script>
+        const p = document.querySelector(".mensagem") //escreve da mesma forma do css
+        const conteudo = document.querySelector(".container p") 
+        const todos = document.querySelectorAll("p") // seleciona tudo
+        todos.style.fontSize = "100px"
+        p.innerText = "Alterando com o querySelect"
+        conteudo.style.backgroundColor = "red"
+
+        alert(`todos os p no html sao ${todos.length}`)
+    </script>
+</body>
+</html>

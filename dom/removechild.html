@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="lista">
+        <li id="remover">item que sera removido</li>
+        <li id="item01">item01</li>
+        <li id="item02">item02</li>
+        <li id="item03">item03</li>
+    </ul>
+
+    <script>
+        // const lista = document.getElementById("lista")
+        // const item = document.getElementById("remover")
+        // lista.removeChild(item)
+        // lista.removeChild(document.getElementById("item03"))
+        
+
+
+        const lista = document.getElementById("lista")
+        const itens = document.querySelectorAll("li")
+        
+        itens.forEach((item)=> {lista.removeChild(item)})
+    </script>
+</body>
+</html>
