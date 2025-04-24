@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"> clique me </button>
+    <script>
+
+        // é uma funçao que vai ficar esperando algum evento acontecer e se acontecer acontece tal fiuncao
+
+        const butao = document.getElementById("btn")
+        butao.addEventListener("click", ()=> {alert("o botao foi clicado")
+            butao.style.height = "200px"
+            butao.style.backgroundColor = "red"
+            butao.innerText = "ja clicou"
+        })
+    
+    </script>
+</body>
+</html>

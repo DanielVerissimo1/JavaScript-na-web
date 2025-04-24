@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Olá!</p>
+    <div class="container"></div>
+    <script>
+        const demo = document.getElementById("demo")
+        const container = document.querySelector(".container")
+        container.innerText = "texto com innerText"
+        demo.innerHTML = "<h1> Negrito com innerHTML</h1>"
+        demo.style.color = "red"
+        
+
+        let textoElemento = demo.textContent
+        alert(textoElemento)
+    </script>
+</body>
+</html>
