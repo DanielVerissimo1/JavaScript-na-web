@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio:</h1>
+    <h2>Clique para acender/apagar a lampada</h2>
+    
+    <img id="img" src="img/apagada.png" alt="">
+    
+  
+    <button type="button" id="botao" >Acender/Apagar</button>
+    <script>
+        const botao = document.getElementById("botao")
+        const img = document.getElementById("img")
+        
+
+        botao.addEventListener("click", ()=> {
+
+            if (img.getAttribute("src") === "img/apagada.png"){// o get ele serve para pegar um a valor de um atributo
+
+                img.setAttribute("src","img/acesa.png")// o set troca a valor
+
+            }else{
+                img.setAttribute("src","img/apagada.png")
+
+            }
+
+            }
+
+        )
+
+    </script>
+</body>
+</html>

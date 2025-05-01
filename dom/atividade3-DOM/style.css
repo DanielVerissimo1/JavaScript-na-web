@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    overflow-x: hidden;   
+}
+div.containerForm{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+}
+#exibicaoCard{
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+}
+#criarCard,.removeBtn{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 15px;
+    width:100px;
+    height: 40px;
+}
+.card{
+    margin-top: 2rem;
+    width: 18rem;
+    height: 23rem;
+    padding: 20px;
+}
+.paragrafo{
+    background-color: blueviolet;
+}
